@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" 
+	xmlns:layout="http://ultraq.net.nz/thymeleaf/layout">
+<head>
+   <meta charset="utf-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+   <title>Domaine Social</title>
+
+   <link rel="stylesheet" type="text/css" href="../static/css/myStyle.css"
+			th:href="@{/css/myStyle.css}" />
+	
+   <link href="../static/css/fontello.css" rel="stylesheet"
+         th:href="@{/css/fontello.css}"/>
+   
+   <script src="../static/js/timer.js" th:src="@{/js/timer.js}"></script>
+	 
+</head>
+
+<body onload="getDate();">
+
+<div id="container">
+   <div class="rectangle">
+	<div id="logo"><h3><a href="/homepage">Domaine Social</a></h3></div>
+        
+      <div id="zegar"></div>
+      <div style="clear: both;"></div>
+   </div>
+      <table class="blueTable">
+         <thead>
+          <tr>
+         	<td colspan="2" th:utext=" ${question}"></td>
+         </tr>
+         </thead>
+        
+      <tbody>
+		  <tr>
+          	<td><label><input type="radio" name="radios" id="radio1" value="radio1" th:utext=" 'Réponse 1 : ' +${reponseA} " checked="checked"></label></td>
+          	<td><label><input type="radio" name="radios" id="radio2" value="radio2" th:utext=" 'Réponse 2 : ' +${reponseB} "></label></td>
+         </tr>
+         <tr>
+         	<td><label><input type="radio" name="radios" id="radio3" value="radio3" th:utext=" 'Réponse 3 : ' +${reponseC} "></label></td>
+            <td><label><input type="radio" name="radios" id="radio4" value="radio4" th:utext=" 'Réponse 4 : ' +${reponseD} "></label></td>
+         </tr>
+      </tbody>
+    </table>
+    <span id="numeroReponse" ></span>
+	<!--<div class="icon"><a href="/projectenvironement/quiz/deleteQuestion" shape="rect"><i class="icon-cancel-outline"></i></a></div> -->
+	<!--<div class="icon"><a href="/projectenvironement/quiz/addQuestion" shape="rect" ><i class="icon-plus-outline"></i></a></div> -->
+	<!--<div class="icon"><a href="/projects/quiz/allQuestions" shape="rect" ><i class="icon-down-outline"></i></a></div> -->
+	<!--<div class="icon"><a href="/projects/quiz/oneQuestion" shape="rect" ><i class="icon-right-outline"></i></a></div> -->
+
+<!--    <div onclick='sendRadioValue()' ><a> <span th:if="${reponsequizz == correct }" th:href="@{/resultats}"></span>
+   									    <span th:unless="${reponsequizz == correct}" th:href="@{/homepage}"></span>
+   									    <i class="icon-ok-circle"></i>
+   									    </a></div> 
+ -->
+
+ 	 <div class="icon" onclick='sendRadioValue()'><a> <span th:if="${reponsequizz == 'correct' }" th:href="@{/resultatsbien}"></span>
+   									      <span th:unless="${reponsequizz == 'correct'}" th:href="@{/resultatspabien}"></span>
+   									    <i class="icon-ok-circle"></i>
+   									    </a></div>
+   	 <div class="icon" ><a th:href="@{/homepage}" shape="rect"><i class="icon-cancel-outline"></i></a></div> 	
+							    
+	
+	<div style="clear: both;"></div>
+
+	<div class="spacer"> 
+   <div class="link">
+      <a href="https://fr.linkedin.com/" target="_blank" class="sociallink"><i class="icon-linkedin"></i></a>
+   </div>
+   <div class="yt">
+      <a href="https://www.youtube.com" target="_blank" class="sociallink"><i class="icon-youtube"></i></a>
+   </div>
+   <div class="drop">
+      <a href="https://www.dropbox.com" target="_blank" class="sociallink"><i class="icon-dropbox"></i></a>
+   </div>
+   <div class="skype">
+      <a href="https://www.skype.com" target="_blank" class="sociallink"><i class="icon-skype"></i></a>
+   </div>
+   
+	</div>
+<div style="clear: both;"></div>
+
+
+ <div class="rectangle">2019 &copy; Alteca <i class="icon-mail-alt"></i> contact@alteca.fr</div>
+
+</div>
+
+    <div id="result"></div>
+   
+
+<script> 
+ 	
+ 	function sendRadioValue() { 
+          		           
+            var ele = document.querySelector("input[name='radios']:checked").value;
+                    
+            document.getElementById("numeroReponse").textContext = ele;
+
+            alert("Je suis reponse " + numeroReponse.textContext);
+            
+            return document.location="/projectsocial/quiz/reponseQuestion?radios=" + ele;
+        } 
+ </script> 
+
+</body>
+</html>

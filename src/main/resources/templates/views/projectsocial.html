@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" 
+	xmlns:layout="http://ultraq.net.nz/thymeleaf/layout">
+<head>
+   <meta charset="utf-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+   <title>Questions Sociales</title>
+
+   <link rel="stylesheet" type="text/css" href="../static/css/myStyle.css"
+			th:href="@{/css/myStyle.css}" />
+	<!-- <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css"
+			th:href="@{/css/bootstrap.min.css}" />	 -->			 
+   <link  rel="stylesheet" type="text/css" href="../static/css/fontello.css"
+         th:href="@{/css/fontello.css}"/>
+         
+   <script src="../static/js/timer.js" th:src="@{/js/timer.js}"></script>
+</head>
+</head>
+
+<body onload="getDate();">
+<div>
+<div id="container">
+
+   <div class="rectangle">
+	<!-- <div id="logo"><h1><a href="/homepage">Blablaquiz</a></h1></div> -->
+      <div id="logo"><a href="/homepage"><img src="../../static/img/logo.png" width="500" th:src="@{img/logo.png}"/></a></div>
+      <div id="zegar"></div>
+      <div style="clear: both;"></div>
+   </div>
+
+   <div class="square">
+   	<div class="tile1">
+   	    <a href="/projectsocial/quiz/oneQuestion">      
+         <i class="icon-windy-rain" ></i><br />Quiz Social 1</a>
+      </div>
+      
+     
+      <div class="tile1">
+      	 <a href="/projectsocial/quiz/oneQuestion">    
+         <i class="icon-windy-rain"></i><br />Quiz Social 2</a>
+      </div>
+
+		<div style="clear:both;"></div>
+
+      <div class="tile1">
+      	 <a href="/projectsocial/quiz/oneQuestion">       
+         <i class="icon-windy-rain"></i><br />Quiz Social 5</a>
+      </div>
+     
+      <div class="tile1">
+       	 <a href="/projectsocial/quiz/oneQuestion">       
+        <i class="icon-windy-rain"></i><br />Quiz Social 6</a>
+      </div>
+
+      <div style="clear:both;"></div>
+   </div>
+  
+   <div class="square">
+    
+         <div class="tile1">
+            <a href="/projectsocial/quiz/oneQuestion">    
+            <i class="icon-windy-rain" ></i><br />Quiz Social 3</a>
+         </div>
+         
+      <div class="tile1">
+         <a href="/projectsocial/quiz/oneQuestion">       
+         <i class="icon-windy-rain"></i><br />Quiz Social 4</a>
+      </div>
+
+	<div style="clear:both;"></div>
+
+      <div class="tile1">
+          <a href="/projectsocial/quiz/oneQuestion">     
+         <i class="icon-windy-rain"></i><br />Quiz Social 7</a>
+      </div>
+      
+      <div class="tile1">
+       	  <a href="/projectsocial/quiz/oneQuestion">     
+         <i class="icon-windy-rain"></i><br />Quiz Social 8</a>
+      </div>
+   </div>
+  
+   
+   <div class="git">
+      <a href="https://www.github.com" target="_blank" class="sociallink"><i class="icon-linkedin"></i></a>
+   </div>
+   
+   <div class="yt">
+      <a href="https://www.youtube.com" target="_blank" class="sociallink"><i class="icon-youtube"></i></a>
+   </div>
+   
+   <div class="drop">
+      <a href="https://www.dropbox.com" target="_blank" class="sociallink"><i class="icon-dropbox"></i></a>
+   </div>
+   
+   <div class="skype">
+      <a href="https://www.skype.com" target="_blank" class="sociallink"><i class="icon-skype"></i></a>
+   </div>
+   <div class="skype">
+      <a href="/projectenvironment/quiz/addQuestion" class="sociallink"><i class="icon-plus-outline"></i><br />Ajout d'une question</a>
+   </div>
+   <div style="clear:both;"></div>
+   </div>
+   <div style="clear: both;"></div>
+
+   <div class="rectangle">2019 &copy; Alteca <i class="icon-mail-alt"></i> contact@alteca.fr</div>
+
+</div>
+
+</body>
+</html>
