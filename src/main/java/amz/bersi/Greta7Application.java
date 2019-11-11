@@ -26,7 +26,7 @@ public class Greta7Application implements CommandLineRunner{
 	
 	@Override
 	public void run(String... args) throws Exception {
-			
+		/*questionDAO.save(new Question("Hauteur vague la plus haute du monde (en metre)?", "125", "236", "524", "406", "C", "Nature", "Environnement", 2019));*/	
 		questionDAO.save(new Question("Hauteur vague la plus haute du monde (en metre)?", "125", "236", "524", "406", "C", "Nature", "Environnement", 2019));
 		questionDAO.save(new Question("Chaleur la plus élevée en degré sur terre (en degre celsius)?", "45", "50.3", "58", "61.2", "C", "Climat", "Environnement", 2019));
 		questionDAO.save(new Question("Longueur du canal du midi (en km) ?", "241", "225", "256", "234", "A", "Transport", "Economique", 2019));
