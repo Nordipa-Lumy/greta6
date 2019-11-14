@@ -24,9 +24,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 	@Override
 	protected void configure(HttpSecurity http) throws Exception{
 		http.formLogin();
-	/****DETAIL DROITS http.authorizeRequests().antMatchers("/projectenvironment/quiz/addQuestion","/projectenvironment/quiz/addConseil").hasRole("ADMIN");***/
-		http.authorizeRequests().antMatchers("/admin/*").hasRole("ADMIN");
-		http.authorizeRequests().antMatchers("/user/*").hasRole("USER");
+		http.authorizeRequests().antMatchers("/projectenvironment/quiz/addQuestion","/projectenvironment/quiz/addConseil").hasRole("ADMIN");
+		/*http.authorizeRequests().antMatchers("/admin/*").hasRole("ADMIN");
+		http.authorizeRequests().antMatchers("/user/*").hasRole("USER");*/
 	}
 
 	@Bean

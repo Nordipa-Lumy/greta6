@@ -8,7 +8,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import lombok.Data;
+
 @Entity
+@Data 
 @Table(name = "CONSEIL")
 public class Conseil implements Serializable{
 
@@ -26,21 +29,5 @@ public class Conseil implements Serializable{
 	public Conseil(String texte) {
 		this.texte = texte;
 	}
-
-	public Long getIdConseil() {
-		return idConseil;
-	}
-
-	public void setIdConseil(Long idConseil) {
-		this.idConseil = idConseil;
-	}
-
-	public String getTexte() {
-		return texte;
-	}
-
-	public void setTexte(String texte) {
-		this.texte = texte;
-	}
-	
+		
 }

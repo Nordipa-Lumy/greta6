@@ -7,8 +7,14 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import amz.bersi.dao.ConseilDAO;
 import amz.bersi.dao.QuestionDAO;
+import amz.bersi.dao.RoleDAO;
+import amz.bersi.dao.UserDAO;
+import amz.bersi.dao.UserRoleDAO;
 import amz.bersi.entities.Conseil;
 import amz.bersi.entities.Question;
+import amz.bersi.entities.Role;
+import amz.bersi.entities.User;
+import amz.bersi.entities.User_role;
 
 @SpringBootApplication
 public class Greta7Application implements CommandLineRunner{
@@ -18,7 +24,16 @@ public class Greta7Application implements CommandLineRunner{
 	
 	@Autowired
 	private ConseilDAO conseilDAO;  
+	
+	@Autowired
+	private UserDAO userDAO;
 
+	@Autowired
+	private RoleDAO roleDAO;
+	
+	@Autowired
+	private UserRoleDAO userRoleDAO;
+	
 	public static void main(String[] args) {
 		SpringApplication.run(Greta7Application.class, args);
 	}
@@ -58,6 +73,18 @@ public class Greta7Application implements CommandLineRunner{
 		conseilDAO.save(new Conseil("Il faut acheter en vrac !"));
 		conseilDAO.save(new Conseil("Il ne faut pas manger nos amis les animaux !"));
 		conseilDAO.save(new Conseil("Il faut faire du sport !"));
+		
+		userDAO.save(new User("Idir", "JSK", true));
+		userDAO.save(new User("Albator", "Surcouf", true));
+		userDAO.save(new User("Tarzan", "Raymond", true));
+		
+		roleDAO.save(new Role("ADMIN"));
+		roleDAO.save(new Role("USER"));
+		
+		userRoleDAO.save(new User_role("ADMIN", "ADMIN"));
+		userRoleDAO.save(new User_role("ADMIN", "USER"));
+		userRoleDAO.save(new User_role("USER", "USER"));
+		
 		
 		/*
 		SyndFeed feed = new SyndFeedImpl();

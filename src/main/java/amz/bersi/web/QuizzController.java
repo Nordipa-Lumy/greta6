@@ -36,8 +36,24 @@ public class QuizzController {
 	
 	@GetMapping({"/", "/home", "/homepage"}) 
 	public String home(){
+		/*****return "redirect:views/homepage";****/
 		return "views/homepage"; 
-	} 
+	}
+	
+	/*@GetMapping("/") 
+	public String home1(){
+		return "views/homepage"; 
+	}
+	
+	@GetMapping("/home") 
+	public String home2(){
+		return "views/homepage"; 
+	}
+	
+	@GetMapping("/homepage") 
+	public String home3(){
+		return "views/homepage"; 
+	}*/
 	
 	@GetMapping("/resultatspabien") 
 	public String resultatsko(){
@@ -266,6 +282,5 @@ public class QuizzController {
 			System.out.println("tant pis!! jai taper :" + numReponse + " correct : "+ q.getGood()+ "  hasard :" + getRandom());
 			return "views/resultatsko";
 		}
-				
 	}
 }
