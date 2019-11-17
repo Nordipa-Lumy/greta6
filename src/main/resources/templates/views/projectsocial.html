@@ -25,7 +25,12 @@
    <div class="rectangle">
 	<!-- <div id="logo"><h1><a href="/homepage">Blablaquiz</a></h1></div> -->
       <div id="logo"><a href="/homepage"><img src="../../static/img/logo.png" width="500" th:src="@{img/logo.png}"/></a></div>
-      <div id="pendule"></div>
+      <div id="zegar"></div>
+      <ul class="nav navbar-nav pull-right">
+      	<li>
+      		<a class="btn btn-danger" th:href="@{/logout}">logout</a>
+      	</li>
+      </ul>
       <div style="clear: both;"></div>
    </div>
 

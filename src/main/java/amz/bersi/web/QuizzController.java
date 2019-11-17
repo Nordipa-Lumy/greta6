@@ -33,6 +33,12 @@ public class QuizzController {
 		return (long) Math.random();
 	}
 	
+	@GetMapping("/403") 
+	public String accesInterdit(){
+		/*****return "redirect:views/homepage";****/
+		return "views/403"; 
+	}
+	
 	
 	@GetMapping({"/", "/home", "/homepage"}) 
 	public String home(){

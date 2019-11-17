@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 
 @Entity
 @Data @NoArgsConstructor @AllArgsConstructor
-@Table(name = "ROLES")
+//@Table(name = "ROLES")
 public class Role implements Serializable{
 
 	@Id
