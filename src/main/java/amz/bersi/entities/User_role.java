@@ -23,8 +23,9 @@ import javax.persistence.Index;
 @Table(
 	    name="USER_ROLE", 
 	    indexes = {
-	       @Index(name = "USER_ROLE_0", columnList = "role"),
-	       @Index(name = "USER_ROLE_1", columnList = "username")})
+	       @Index(name = "USER_ROLE_0", columnList = "username"),		
+	       @Index(name = "USER_ROLE_1", columnList = "role")
+	       })
 public class User_role implements Serializable{
 	
 	@Id
@@ -35,9 +36,9 @@ public class User_role implements Serializable{
 	
 	private String username;
 	
-	public User_role(String role, String username) {
-		this.role = role;
+	public User_role(String username, String role) {
 		this.username = username;
+		this.role = role;
 	}
 
 }

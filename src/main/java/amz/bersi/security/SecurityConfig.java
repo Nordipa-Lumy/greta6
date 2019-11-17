@@ -42,7 +42,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 		auth.inMemoryAuthentication().passwordEncoder(new BCryptPasswordEncoder());
 		*/
 		PasswordEncoder bcpe = getBPCE();
-		System.out.println("666**********" +bcpe.encode("999"));
+		
+		System.out.println("666**********" +bcpe.encode("666"));
 		//System.out.println("777**********" +bcpe.encode("999"));
 		auth.jdbcAuthentication()
 			.dataSource(dataSource)

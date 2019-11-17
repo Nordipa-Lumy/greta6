@@ -95,6 +95,7 @@ public class Greta7Application implements CommandLineRunner{
 		//userRoleDAO.save(new User_role("ADMIN", "USER"));
 		userRoleDAO.save(new User_role("USER", "USER"));
 		userRoleDAO.save(new User_role("ADMIN", "USER"));
+		userRoleDAO.save(new User_role("Idir", "ADMIN"));
 		
 		
 		/*
